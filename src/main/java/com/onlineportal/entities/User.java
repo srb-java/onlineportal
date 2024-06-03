@@ -30,6 +30,12 @@ public class User {
     private Long id;
     private String username;
     
+    @NotBlank(message = "FirstName is required")
+    private String firstName;
+    
+    @NotBlank(message = "LastName is required")
+    private String lastName;
+    
     @NotBlank(message = "Password is required")
     @Size(min = 6, message = "Password must be at least 6 characters")
     private String password;

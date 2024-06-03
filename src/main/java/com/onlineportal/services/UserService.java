@@ -34,7 +34,7 @@ public class UserService {
     	// Assign ROLE_STUDENT to new user
         Role role = roleRepository.findByName(ROLE_STUDENT);
         if (role == null) {
-            role = new Role("ROLE_STUDENT");
+            role = new Role(ROLE_STUDENT);
             roleRepository.save(role);
         }
         Set<Role> roles = new HashSet<>();
